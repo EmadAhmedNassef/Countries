@@ -11,7 +11,7 @@ export default function CountryDetailsComp({ name }) {
   });
 
   if (isPending) return <CountryDetailsSkeleton />;
-  if (isError) return <p>{error.message}</p>;
+  if (isError) return <p role="alert">{error.message}</p>;
 
   const country = data;
   return (
@@ -27,11 +27,13 @@ export default function CountryDetailsComp({ name }) {
           {country.flag?.url_png ? (
             <img
               src={country.flag.url_png}
-              alt={country.names?.common}
+              alt={`${country.names?.common} flag`}
               className="w-full max-w-lg"
             />
           ) : (
-            <span className="text-8xl">{country.flag?.emoji || "🏳️"}</span>
+            <span role="img" aria-label={`${country.names?.common} flag`} className="text-8xl">
+              {country.flag?.emoji || "🏳️"}
+            </span>
           )}
         </div>
 

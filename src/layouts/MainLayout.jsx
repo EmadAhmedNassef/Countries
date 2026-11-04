@@ -9,8 +9,16 @@ export default function MainLayout() {
     <Box>
       <ScrollRestoration />
       <ScrollProgressBar />
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-9999 focus:bg-white focus:p-3 focus:text-gray-900"
+      >
+        Skip to main content
+      </a>
       <HeaderComp />
-      <Outlet />
+      <main id="main-content">
+        <Outlet />
+      </main>
       <ScrollProgressCircle />
     </Box>
   );

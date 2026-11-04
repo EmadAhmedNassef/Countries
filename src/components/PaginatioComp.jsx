@@ -37,6 +37,7 @@ export default function PaginationComp() {
 
   return (
     <Pagination
+      aria-label="Countries pages"
       total={Math.ceil(data.meta.total / 25)}
       color="green"
       value={page}

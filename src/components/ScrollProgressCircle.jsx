@@ -32,7 +32,6 @@ export default function ScrollProgressCircle() {
             <ArrowUpIcon size={28} weight="bold" />
           </ActionIcon>
         }
-        aria-label={`${Math.round(scrollProgress)}% page progress`}
       />
     </div>
   );

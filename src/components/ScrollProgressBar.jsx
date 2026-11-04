@@ -10,6 +10,7 @@ export default function ScrollProgressBar() {
 
   return (
     <Progress
+      role="progressbar"
       value={scrollProgress}
       size="sm"
       radius={0}
@@ -24,6 +25,9 @@ export default function ScrollProgressBar() {
         zIndex: 9999,
       }}
       aria-label={`${Math.round(scrollProgress)}% page progress`}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={Math.round(scrollProgress)}
     />
   );
 }

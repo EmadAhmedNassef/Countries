@@ -13,6 +13,7 @@ export default function CountryDetails() {
         color="dark"
         className="dark:border-gray-400! dark:text-gray-100!"
         onClick={() => navigate(-1)}
+        aria-label="Go back to the previous page"
         mb="xl"
       >
         Back

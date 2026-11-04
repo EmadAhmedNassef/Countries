@@ -13,7 +13,7 @@ export default function ThemeBtn() {
     <Select
       size={isSmallScreen ? "xs" : isMediumScreen ? "sm" : "md"}
       w={isSmallScreen ? "110" : isMediumScreen ? "150" : "200"}
-      className="dark:bg-gray-800! dark:text-white!"
+      className="dark:text-white!"
       value={theme}
       onChange={setTheme}
       data={[

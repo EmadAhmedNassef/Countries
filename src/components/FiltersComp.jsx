@@ -38,11 +38,19 @@ export default function FiltersComp() {
   };
 
   return (
-    <Box className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 px-4 py-8 md:py-12">
+    <Box
+      component="section"
+      aria-labelledby="filters-heading"
+      className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 px-4 py-8 md:py-12"
+    >
+      <h2 id="filters-heading" className="sr-only">
+        Find countries
+      </h2>
       <TextInput
+        label="Search for a country"
         placeholder="Search for a country..."
         size="md"
-        className="w-full sm:w-[55%] lg:w-[35%] dark:bg-gray-800! dark:text-white!"
+        className="w-full sm:w-[55%] lg:w-[35%] dark:text-white!"
         leftSection={<MagnifyingGlassIcon size={20} />}
         value={search}
         onChange={handleSearchChange}
@@ -53,6 +61,7 @@ export default function FiltersComp() {
       />
 
       <Select
+        label="Filter by region"
         size="md"
         placeholder="Filter by Region"
         value={region}
@@ -64,7 +73,7 @@ export default function FiltersComp() {
           { value: "europe", label: "Europe" },
           { value: "oceania", label: "Oceania" },
         ]}
-        className="w-full sm:w-[40%] lg:w-52 dark:bg-gray-800! dark:text-white!"
+        className="w-full sm:w-[40%] lg:w-52 dark:text-white!"
         classNames={{
           input: "dark:bg-gray-800! dark:text-white! dark:border-gray-600!",
           dropdown: "dark:bg-gray-800! dark:border-gray-600!",
