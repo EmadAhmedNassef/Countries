@@ -1,13 +1,44 @@
+@import "tailwindcss";
+@import "@mantine/core/styles.css";
+
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #1f2937;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html.dark,
+html.dark body {
+  background-color: #030712;
+  color: #f3f4f6;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  background: #f7f5fb;
+}
+
+/* Thumb */
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5cf6, #764ed1);
+  border-radius: 999px;
+  border: 2px solid #f7f5fb;
+}
+
+/* Hover */
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #764ed1, #623bb8);
 }
